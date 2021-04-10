@@ -1,11 +1,11 @@
 # Summary:
-The context menu item "Open PowerShell window here" and "Execute with PowerShell" does not sanitize the input path. If a user open PowerShell through the context menu in a malicious folder/share, it can lead to the execution of another script / binary.
+The context menu items "Open PowerShell window here" and "Execute with PowerShell" do not sanitize the input path. If a user open PowerShell through the context menu in a malicious folder/share, it can lead to the execution of another script / binary.
 
 # Description:
 
 The context menu item "Open PowerShell window here" and "Execute with PowerShell" does not sanitize the input path. <br>
 If a user open PowerShell through the context menu in a malicious folder/share, it can lead to the execution of another script / binary. <br>
-PowerShell will append the folder name to the commandline. PowerShell will try to execute the folder name.
+PowerShell will append the folder name to the command line. PowerShell will try to execute the folder name.
 
 # Impact:
 An attacker could create a malicious file and a malicious folder. If a user try to execute the script inside the folder, it will execute the malicious file instead.
@@ -37,7 +37,7 @@ An attacker could create a malicious file and a malicious folder. If a user try 
 # Intended behavior:
 The Powershell should sanitize the path and execute the script.
 
-# Timeline and Microsoft Security Response Center Response:
+# Microsoft Security Response Center Response:
 Microsoft has decided that it will not be fixing this vulnerability in the current version and we are closing this case.  In this case this is due to the heavy target interaction required.
 
 # Windows Version:
